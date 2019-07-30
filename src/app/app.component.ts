@@ -8,14 +8,18 @@ import { DatabaseService } from './services/database.service';
 })
 export class AppComponent {
   title = 'smog';
-  
-  constructor(private dataService: DatabaseService){
-    
+  bigData1 = [];
+  bigData2 = [];
+  bigData3 = [];
+
+
+  constructor(private dataService: DatabaseService) {
+
   }
-  
-  ngOnInit(){
-    this.dataService.getFilm('A New Hope').subscribe(data => console.log(data))
-    this.dataService.getPeople('r2').subscribe(data => console.log(data))
-    this.dataService.getStarship('Death Star').subscribe(data => console.log(data))
+
+  ngOnInit() {
+    this.dataService.getFilm('A New Hope').subscribe(data => this.bigData1 = data.results[0])
+    this.dataService.getPeople('r2').subscribe(data => this.bigData2 = data.results[0])
+    this.dataService.getStarship('Death Star').subscribe(data => this.bigData3 = data.results[0])
   }
 }
