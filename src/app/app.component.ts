@@ -1,6 +1,5 @@
 import { Component } from '@angular/core';
 import { DatabaseService } from './services/database.service';
-
 @Component({
   selector: 'app-root',
   templateUrl: './app.component.html',
@@ -11,12 +10,8 @@ export class AppComponent {
   bigData1 = [];
   bigData2 = [];
   bigData3 = [];
-
-
   constructor(private dataService: DatabaseService) {
-
   }
-
   ngOnInit() {
     this.dataService.getFilm('A New Hope').subscribe(data => this.bigData1 = data.results[0])
     this.dataService.getPeople('r2').subscribe(data => this.bigData2 = data.results[0])
