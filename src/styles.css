@@ -1,2 +1,11 @@
 /* You can add global styles to this file, and also import other style files */
 @import '@angular/material/prebuilt-themes/deeppurple-amber.css';
+
+body{
+    width:100vw;
+    height:100vh;
+    background-image: url("https://files.slack.com/files-pri/TK0CFM11U-FLL97G5PU/image.png");
+    background-repeat: no-repeat;
+    background-size: cover;
+    
+}
