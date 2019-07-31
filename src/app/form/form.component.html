@@ -1,20 +1,18 @@
-  <form  (ngSubmit)="onSubmit()" [formGroup]="searchForm">
-    <div class="example-container">
-            <mat-form-field>
-                    <mat-label>Search Type</mat-label>
-                    <mat-select formControlName="searchType" value="">
-                      <mat-option value="starships">Ships</mat-option>
-                      <mat-option value="people">People</mat-option>
-                      <mat-option value="films">Films</mat-option>
-                    </mat-select>
-                  </mat-form-field>
+<form (ngSubmit)="onSubmit()" [formGroup]="searchForm">
+  <div class="example-container">
+    <mat-form-field>
+      <mat-label>Search Type</mat-label>
+      <mat-select formControlName="searchType" value="">
+        <mat-option value="starships">Ships</mat-option>
+        <mat-option value="people">People</mat-option>
+        <mat-option value="films">Films</mat-option>
+      </mat-select>
+    </mat-form-field>
 
-        <mat-form-field>
-          <input matInput formControlName="searchTerm" placeholder="Search Term">
-        </mat-form-field>
-      
-    </div>
-    <button mat-raised-button color="primary" type="submit">Search</button>
+    <mat-form-field>
+      <input matInput formControlName="searchTerm" placeholder="Search Term">
+    </mat-form-field>
+
+  </div>
+  <button mat-raised-button color="primary" type="submit">Search</button>
 </form>
-      
-      
