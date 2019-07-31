@@ -12,6 +12,7 @@ export class FormComponent implements OnInit {
   public searchForm: FormGroup;
   smallData = []; // has searchTerm and searchType
   bigData2 = [];
+  bigDataBaby=[];
 
   constructor(private form: FormBuilder, private databaseService: DatabaseService) {
     this.createForm();
@@ -30,6 +31,7 @@ export class FormComponent implements OnInit {
 
   test() {
     console.log(this.bigData2[0])
+    this.bigDataBaby = this.bigData2[0]
   }
 
   onSubmit() {
@@ -39,4 +41,6 @@ export class FormComponent implements OnInit {
     this.databaseService.getInfo(this.searchForm.value).subscribe(data => this.bigData2 = data.results)
     this.test()
   }
+
+
 }
