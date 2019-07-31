@@ -1,13 +1,12 @@
 import { Component } from '@angular/core';
 import { DatabaseService } from './services/database.service';
-
 @Component({
   selector: 'app-root',
   templateUrl: './app.component.html',
   styleUrls: ['./app.component.css']
 })
 export class AppComponent {
-  title = 'smog';
+  title = 'Team Smog SWAPI';
   bigData1 = [];
   bigData2 = [];
   bigData3 = [];
@@ -18,4 +17,7 @@ export class AppComponent {
     this.dataService.getPeople('r2').subscribe(data => this.bigData2 = data.results[0])
     this.dataService.getStarship('Death Star').subscribe(data => this.bigData3 = data.results[0])
   }
+
+  
+
 }

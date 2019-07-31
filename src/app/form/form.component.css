@@ -1,0 +1,15 @@
+.card{
+    border: 2px black solid;
+    border-radius: 10px;
+    background-color: yellow;
+    box-shadow: 5px 10px;
+    text-align:center;
+    margin-right:42%;
+    margin-left:42%;
+    padding-top:100px;
+    padding-bottom:100px;
+}
+
+.searchy{
+    background-color: white;
+}
