@@ -1,71 +1,18 @@
-  <div class="searchy">
-  <form (ngSubmit)="onSubmit()" [formGroup]="searchForm">
-    <div class="example-container">
-      <mat-form-field>
-        <mat-label>Search Type</mat-label>
-        <mat-select formControlName="searchType" value="">
-          <mat-option value="starships">Ships</mat-option>
-          <mat-option value="people">People</mat-option>
-          <mat-option value="films">Films</mat-option>
-        </mat-select>
-      </mat-form-field>
-      <mat-form-field>
-        <input matInput formControlName="searchTerm" placeholder="Search Term">
-      </mat-form-field>
-      </div>
-    <button mat-raised-button color="primary" type="submit">Search</button>
-  </form>
+<form (ngSubmit)="onSubmit()" [formGroup]="searchForm">
+  <div class="example-container">
+    <mat-form-field appearance=>
+      <mat-label class="text">Search Type</mat-label>
+      <mat-select formControlName="searchType" value="">
+        <mat-option class="text" value="starships">Ships</mat-option>
+        <mat-option class="text" value="people">People</mat-option>
+        <mat-option class="text" value="films">Films</mat-option>
+      </mat-select>
+    </mat-form-field>
+
+    <mat-form-field appearance="outline">
+      <input class="text" matInput formControlName="searchTerm" placeholder="Search Term">
+    </mat-form-field>
+
   </div>
-
-<!-- People card -->
-<div>
-  <mat-card class="card">
-    <mat-card-title >{{bigDataBaby.name}}</mat-card-title>
-    <br />
-    <mat-card-content>
-       <span>Height:</span> {{bigDataBaby.height}}
-        <br />
-        <span>Weight:</span> {{bigDataBaby.mass}}
-        <br />
-        <span>BirthYear:</span> {{bigDataBaby.birth_year}}
-        <br />
-        <span>Color:</span> {{bigDataBaby.skin_color}}
-    </mat-card-content>
-    </mat-card>
-</div>
-
-<!-- StarShips Card -->
-<div>
-  <mat-card class="card">
-    <mat-card-title >{{bigDataBaby.name}}</mat-card-title>
-    <br />
-    <mat-card-content>
-       <span>model:</span> {{bigDataBaby.model}}
-        <br />
-        <span>Manf.:</span> {{bigDataBaby.manufacturer}}
-        <br />
-        <span>Class:</span> {{bigDataBaby.class}}
-        <br />
-        <span>Length:</span> {{bigDataBaby.length}}
-        <br />
-        <span>Crew:</span>{{bigDataBaby.crew}}
-    </mat-card-content>
-    </mat-card>
-</div>
-
-<!-- Films Card -->
-<div>
-  <mat-card class="card">
-    <mat-card-title >{{bigDataBaby.title}}</mat-card-title>
-    <br />
-    <mat-card-content>
-       <span>Episode:</span> {{bigDataBaby.episode_id}}
-        <br />
-        <span>Director:</span> {{bigDataBaby.director}}
-        <br />
-        <span>Producer:</span> {{bigDataBaby.producer}}
-        <br />
-        <span>Release Dateq:</span> {{bigDataBaby.release_date}}
-    </mat-card-content>
-    </mat-card>
-</div>
+  <button mat-raised-button color="primary" type="submit">Search</button>
+</form>
