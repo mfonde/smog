@@ -10,7 +10,7 @@ import { DatabaseService } from '../services/database.service';
 export class FormComponent implements OnInit {
 
   public searchForm: FormGroup;
-  smallData = []; // has searchTerm and searchType
+  smallData = ''; // has searchType
   bigData2 = [];
   bigDataBaby=[];
 
@@ -35,9 +35,9 @@ export class FormComponent implements OnInit {
   }
 
   onSubmit() {
-    this.smallData = this.searchForm.value;
-    console.log(this.smallData)
-    console.log(this.searchForm.value);
+    this.smallData = this.searchForm.value.searchType;
+
+    console.log(this.searchForm.value.searchType);
     this.databaseService.getInfo(this.searchForm.value).subscribe(data => this.bigData2 = data.results)
     this.test()
   }
