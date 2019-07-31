@@ -10,12 +10,15 @@ import { DatabaseService } from '../services/database.service';
 export class FormComponent implements OnInit {
 
   public searchForm: FormGroup;
+  smallData = []; // has searchTerm and searchType
+  bigData2 = [];
 
   constructor(private form: FormBuilder, private databaseService: DatabaseService) {
     this.createForm();
-   }
+  }
 
   ngOnInit() {
+
   }
 
   createForm() {
@@ -25,9 +28,14 @@ export class FormComponent implements OnInit {
     })
   }
 
-  onSubmit() {
-    console.log(this.searchForm.value);
-    this.databaseService.getInfo(this.searchForm.value);
+  test() {
+    console.log(this.bigData2[0])
   }
 
+  onSubmit() {
+    this.smallData = this.searchForm.value;
+    console.log(this.smallData)
+    console.log(this.searchForm.value);
+    this.databaseService.getInfo(this.searchForm.value).subscribe(data => this.bigData2 = data.results)
+  }
 }
