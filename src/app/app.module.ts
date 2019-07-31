@@ -5,11 +5,12 @@ import { MatCardModule } from '@angular/material/card';
 import { AppComponent } from './app.component';
 import { DatabaseService } from './services/database.service';
 import { HttpClient, HttpClientModule } from '@angular/common/http';
-import { FilmCardComponent } from './film-card/film-card.component';
+import { PeopleComponent } from './people/people.component';
 
 @NgModule({
   declarations: [
     AppComponent,
+    PeopleComponent,
   ],
   imports: [
     BrowserModule,
