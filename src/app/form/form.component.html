@@ -1,16 +1,16 @@
 <form (ngSubmit)="onSubmit()" [formGroup]="searchForm">
   <div class="example-container">
-    <mat-form-field>
-      <mat-label>Search Type</mat-label>
+    <mat-form-field appearance="outline">
+      <mat-label class="text">Search Type</mat-label>
       <mat-select formControlName="searchType" value="">
-        <mat-option value="starships">Ships</mat-option>
-        <mat-option value="people">People</mat-option>
-        <mat-option value="films">Films</mat-option>
+        <mat-option class="text" value="starships">Ships</mat-option>
+        <mat-option class="text" value="people">People</mat-option>
+        <mat-option class="text" value="films">Films</mat-option>
       </mat-select>
     </mat-form-field>
 
-    <mat-form-field>
-      <input matInput formControlName="searchTerm" placeholder="Search Term">
+    <mat-form-field appearance="outline">
+      <input class="text" matInput formControlName="searchTerm" placeholder="Search Term">
     </mat-form-field>
 
   </div>
