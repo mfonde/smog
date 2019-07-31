@@ -13,12 +13,12 @@
         <input matInput formControlName="searchTerm" placeholder="Search Term">
       </mat-form-field>
       </div>
-    <button mat-raised-button color="primary" type="submit">Search</button>
+    <button mat-raised-button color="primary" type="submit">Search(x2)</button>
   </form>
   </div>
 
 <!-- People card -->
-<div>
+<div *ngIf=bigDataBaby.height>
   <mat-card class="card">
     <mat-card-title >{{bigDataBaby.name}}</mat-card-title>
     <br />
@@ -35,7 +35,7 @@
 </div>
 
 <!-- StarShips Card -->
-<div>
+<div *ngIf=bigDataBaby.model>
   <mat-card class="card">
     <mat-card-title >{{bigDataBaby.name}}</mat-card-title>
     <br />
@@ -54,7 +54,7 @@
 </div>
 
 <!-- Films Card -->
-<div>
+<div *ngIf=bigDataBaby.title>
   <mat-card class="card">
     <mat-card-title >{{bigDataBaby.title}}</mat-card-title>
     <br />
