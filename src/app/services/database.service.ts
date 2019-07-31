@@ -3,6 +3,7 @@ import { HttpClient, HttpHeaders } from '@angular/common/http';
 import { Observable } from 'rxjs';
 
 
+
 @Injectable({
   providedIn: 'root'
 })
@@ -11,6 +12,7 @@ export class DatabaseService {
   private urlPeople= 'https://swapi.co/api/people/?search=';
   private urlStarship= 'https://swapi.co/api/starships/?search=';
 
+
   constructor(private http: HttpClient) { }
 
   getFilm(search){
@@ -18,7 +20,8 @@ export class DatabaseService {
   }
 
   getPeople(search){
-    return this.http.get<any>(this.urlPeople+search)
+    const url = `https://swapi.co/api/${search.searchType}/?search=${search.searchTerm}`
+    return this.http.get<any>(url)
   }
 
   getStarship(search){
