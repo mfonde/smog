@@ -1,6 +1,6 @@
 import { Injectable } from '@angular/core';
 import { HttpClient, HttpHeaders } from '@angular/common/http';
-import { Observable } from 'rxjs'
+import { Observable } from 'rxjs';
 
 
 @Injectable({
@@ -23,5 +23,11 @@ export class DatabaseService {
 
   getStarship(search){
     return this.http.get<any>(this.urlStarship+search)
+  }
+
+  getInfo(search) {
+  const url = `https://swapi.co/api/${search.searchType}/?search=${search.searchTerm}`
+    console.log(url);
+    return this.http.get<any>(url);
   }
 }
