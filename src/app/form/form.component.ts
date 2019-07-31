@@ -37,5 +37,6 @@ export class FormComponent implements OnInit {
     console.log(this.smallData)
     console.log(this.searchForm.value);
     this.databaseService.getInfo(this.searchForm.value).subscribe(data => this.bigData2 = data.results)
+    this.test()
   }
 }
