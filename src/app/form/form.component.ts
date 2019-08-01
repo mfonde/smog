@@ -12,7 +12,7 @@ export class FormComponent implements OnInit {
   public searchForm: FormGroup;
   smallData = ''; // has searchType
   bigData2 = [];
-  bigDataBaby=[];
+  bigDataBaby = [];
 
   constructor(private form: FormBuilder, private databaseService: DatabaseService) {
     this.createForm();
