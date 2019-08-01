@@ -6,7 +6,7 @@ import { DatabaseService } from './services/database.service';
   styleUrls: ['./app.component.css']
 })
 export class AppComponent {
-  title = 'Team Smog SWAPI';
+  title = 'Team SMOG SWAPI';
   bigData1 = [];
   bigData2 = [];
   bigData3 = [];
